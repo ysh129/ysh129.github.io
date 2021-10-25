@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script>
+		window.onload = function()
+        {
+            canvas = document.getElementById("canvasArea");
+            context = canvas.getContext("2d");
+            drawArc ( 100, 25, 80, 0, 180, false, "#97C30A", "#FF717E");
+            function drawArc(xPos, yPos, radius, startAngle, endAngle,
+                             anticlockwise, lineColor, fillColor)
+            {
+                var startAngle = startAngle * (Math.PI/180);
+                var endAngle = endAngle * (Math.PI/180);
+                var radius = radius;
+
+                context.strokeStyle = lineColor;
+                context.fillStyle = fillColor;
+                context.lineWidth = 8;
+                context.beginPath();
+                context.arc(xPos, yPos, radius, startAngle, endAngle, anticlockwise);
+                context.fill();
+                context.stroke();
+            }
+        }
+	</script>
+</head>
+<body>
+<div style = "width:240px; height:140px; margin:0 auto; padding:5px;">
+	<canvas id = "canvasArea" width = "210" height = "130"
+
+            style = "border:0px solid black">
+	</canvas>
+</div>
+</body>
+</html>
