@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
-</html>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,12 +18,13 @@
     <body onload="main()">
         <br>
         <div style="text-align: center;">
-            请输出阶数（0-6）：<br>
+            <canvas id="gl" width="550" height="550"></canvas><br />
+			请输出阶数（0-6）：<br>
             <input type="text" id="show" value="4"/><br>
-            请输入要旋转的度数：<br>
+            请输入旋转度数：<br>
             <input type="text" id="show2" value="1"/><br><br>
             <input type="submit" onclick="start()" value="自动旋转"/><br>
-            <canvas id="gl" width="550" height="550"></canvas>
+            
         </div>
     </body>
 </html>
